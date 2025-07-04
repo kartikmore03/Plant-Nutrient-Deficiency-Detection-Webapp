@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Revive Nutrient Fix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" height="40"
+                    onerror="this.style.display='none'">
+                Green Revive Nutrient Fix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/detect">Detect Deficiency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <h1 class="display-4 fw-bold">Green Revive Nutrient Fix</h1>
+                    <p class="lead mb-4">Identify nutrient deficiencies in your plants using AI technology</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-start">
+                        <a href="/detect" class="btn btn-primary btn-lg px-4 me-sm-3">Start Detection</a>
+                        <a href="/about" class="btn btn-outline-secondary btn-lg px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" alt="Plant Leaf Analysis"
+                        class="hero-image img-fluid" style="max-height: 400px; width: auto;"
+                        onerror="this.src='https://via.placeholder.com/600x400?text=Plant+Leaf+Analysis'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container py-5">
+        <div class="row g-4 py-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-primary bg-gradient rounded-3 mb-3">
+                            <i class="bi bi-camera text-white"></i>
+                        </div>
+                        <h3 class="card-title">Easy Detection</h3>
+                        <p class="card-text">Simply upload a photo of your plant leaf and our AI will analyze it for
+                            nutrient deficiencies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-success bg-gradient rounded-3 mb-3">
+                            <i class="bi bi-gear-wide-connected text-white"></i>
+                        </div>
+                        <h3 class="card-title">Accurate Analysis</h3>
+                        <p class="card-text">Our advanced AI models have been trained on thousands of plant images for
+                            precise detection.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body text-center">
+                        <div class="feature-icon bg-warning bg-gradient rounded-3 mb-3">
+                            <i class="bi bi-tools text-white"></i>
+                        </div>
+                        <h3 class="card-title">Treatment Solutions</h3>
+                        <p class="card-text">Get detailed recommendations and treatment options for identified
+                            deficiencies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plant Types Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Supported Plants</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{{ url_for('static', filename='images/banana-plant.jpg') }}"
+                                    class="img-fluid rounded-start" alt="Banana Plant"
+                                    style="height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Banana Plants</h3>
+                                    <p class="card-text">Our system can detect nitrogen, phosphorus, and potassium
+                                        deficiencies in banana plants with high accuracy.</p>
+                                    <a href="/detect?plant=banana" class="btn btn-sm btn-primary">Analyze Banana
+                                        Leaf</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{{ url_for('static', filename='images/coffee-plant.jpg') }}"
+                                    class="img-fluid rounded-start" alt="Coffee Plant"
+                                    style="height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Coffee Plants</h3>
+                                    <p class="card-text">Detect nutrient deficiencies in coffee plants to ensure optimal
+                                        growth and bean quality.</p>
+                                    <a href="/detect?plant=coffee" class="btn btn-sm btn-primary">Analyze Coffee
+                                        Leaf</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="container py-5 text-center">
+        <h2>Ready to identify nutrient deficiencies in your plants?</h2>
+        <p class="lead mb-4">Get started now and improve your plant health with expert recommendations!</p>
+        <a href="/detect" class="btn btn-success btn-lg px-5">Start Detection</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Green Revive Nutrient Fix</h4>
+                    <p>AI-powered nutrient deficiency detection for plants</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="link-light">Home</a></li>
+                        <li><a href="/detect" class="link-light">Detect Deficiency</a></li>
+                        <li><a href="/about" class="link-light">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:contact@example.com" class="link-light">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Green Revive Nutrient Fix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

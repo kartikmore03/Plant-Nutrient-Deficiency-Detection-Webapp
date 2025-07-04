@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Green Revive Nutrient Fix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" height="40"
+                    onerror="this.style.display='none'">
+                Green Revive Nutrient Fix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/detect">Detect Deficiency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">About Green Revive Nutrient Fix</h1>
+                    <p class="lead my-4">Using advanced AI technology to improve plant health and agricultural
+                        productivity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About the Project -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">The Project</h2>
+                        <p>Green Revive Nutrient Fix is an advanced application that uses artificial intelligence to
+                            detect nutrient deficiencies in banana and coffee plants. Our system employs deep learning
+                            models trained on thousands of leaf images to accurately identify nitrogen, phosphorus, and
+                            potassium deficiencies.</p>
+
+                        <p>This project aims to help farmers and gardeners quickly identify nutrient problems in their
+                            plants, leading to:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Early detection of plant health issues</li>
+                                    <li>Reduced crop losses due to nutrient deficiencies</li>
+                                    <li>More targeted and efficient use of fertilizers</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Improved plant health and crop yields</li>
+                                    <li>Sustainable agricultural practices</li>
+                                    <li>Cost savings on unnecessary fertilizers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">The Technology</h2>
+                        <p>Our application is powered by state-of-the-art deep learning models specifically designed for
+                            image recognition and classification tasks:</p>
+
+                        <div class="tech-section mt-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-primary text-white">
+                                            <h4 class="mb-0">AI Models</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>We use a powerful ensemble of MobileNetV3Large and ResNet50V2 models,
+                                                fine-tuned specifically for plant leaf analysis. These models have been
+                                                trained on diverse datasets to ensure robust performance across various
+                                                lighting conditions and image qualities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-success text-white">
+                                            <h4 class="mb-0">Model Architecture</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Deep convolutional neural networks with attention mechanisms</li>
+                                                <li>Ensemble learning for improved accuracy and robustness</li>
+                                                <li>Transfer learning from pre-trained models</li>
+                                                <li>Optimized for mobile devices with TFLite conversion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header bg-info text-white">
+                                    <h4 class="mb-0">Training Process</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Our models have been trained using a diverse dataset of leaf images representing
+                                        various stages of nutrient deficiencies and healthy plants. The training process
+                                        involved:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Data augmentation to improve model generalization</li>
+                                                <li>Class balancing to handle uneven distribution of deficiency types
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Fine-tuning of hyperparameters for optimal performance</li>
+                                                <li>Validation on separate test sets to ensure reliability</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">How It Works</h2>
+                        <div class="row mt-4">
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h5>Upload Image</h5>
+                                    <p>Take a clear photo of a plant leaf and upload it to our system</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h5>AI Analysis</h5>
+                                    <p>Our AI models analyze the image to detect leaf patterns and characteristics</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h5>Get Results</h5>
+                                    <p>Receive detailed analysis with recommended treatments</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <a href="/detect" class="btn btn-primary btn-lg">Try It Yourself!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title">The Team</h2>
+                        <p>Green Revive Nutrient Fix was developed by a team of agricultural specialists, AI researchers, and software engineers with a passion for solving agricultural challenges through technology.</p>
+                        
+                        <p>The project is led by Atharva Tayade, who is dedicated to making cutting-edge AI technology accessible to farmers and growers worldwide.</p>
+                        
+                        <div class="team-members mt-4">
+                            <h4>Core Team Members</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <ul class="list-unstyled">
+                                                
+                                                <li class="mb-2"><strong></strong> - AI Model Development</li>
+                                                <li class="mb-2"><strong></strong> - Data Engineering</li>
+                                                <li class="mb-2"><strong></strong> - Backend Development</li>
+                                                <li class="mb-2"><strong></strong> - Frontend Development</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                <div class="text-center mt-4">
+                    <p>For collaborations, questions, or feedback, please contact us.</p>
+                    <a href="mailto:contact@example.com" class="btn btn-outline-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Green Revive Nutrient Fix</h4>
+                    <p>AI-powered nutrient deficiency detection for plants</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="link-light">Home</a></li>
+                        <li><a href="/detect" class="link-light">Detect Deficiency</a></li>
+                        <li><a href="/about" class="link-light">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:contact@example.com" class="link-light">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Green Revive Nutrient Fix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+/* Global Styles */
+:root {
+    --primary-color: #28a745;
+    --secondary-color: #ffc107;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.navbar-brand img {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: calc(1.8rem + 1.5vw);
+}
+
+.hero-section .lead {
+    font-size: calc(1rem + 0.3vw);
+}
+
+.hero-section .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(5deg);
+    transition: all 0.5s ease;
+}
+
+.hero-section .hero-image:hover {
+    transform: perspective(1000px) rotateY(0);
+}
+
+.about-hero {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Feature Icons */
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Form Styling */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* Plant Type Card Selection */
+.plant-type-card {
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.plant-type-card .form-check-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.plant-type-card .card {
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.plant-type-card .form-check-input:checked + .form-check-label .card {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.plant-type-card .form-check-label {
+    cursor: pointer;
+}
+
+/* File Input */
+.custom-file-input {
+    margin-bottom: 1rem;
+}
+
+/* Results Page */
+.detection-result {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.result-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Progress Bar Styling */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    transition: width 0.6s ease;
+}
+
+.progress-bar-success {
+    background-color: var(--success-color);
+}
+
+.progress-bar-warning {
+    background-color: var(--warning-color);
+}
+
+/* Probability Distribution Chart */
+.probability-distribution {
+    margin-top: 2rem;
+}
+
+.chart-container {
+    width: 100%;
+}
+
+.prob-bar-container {
+    margin-bottom: 0.75rem;
+}
+
+.prob-bar-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prob-bar-wrapper {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    height: 1.5rem;
+}
+
+.prob-bar {
+    height: 100%;
+    border-radius: 0.25rem;
+    background-color: #6c757d;
+    color: white;
+    text-align: right;
+    padding: 0 0.5rem;
+    line-height: 1.5rem;
+    min-width: 2rem;
+    font-size: 0.8rem;
+    transition: width 0.5s ease-in-out;
+}
+
+.prob-bar.active {
+    background-color: var(--primary-color);
+}
+
+/* Remedies and Fertilizers */
+.remedies-list li, .reference-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* About Page */
+.process-step {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    height: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+/* Team Section */
+.team-members li {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.team-members li:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-section .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand img {
+        height: 30px;
+    }
+    
+    .process-step {
+        margin-bottom: 1rem;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section .hero-image {
+        margin-top: 2rem;
+        transform: none;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .detection-result {
+        font-size: 1rem;
+    }
+    
+    .process-step {
+        padding: 1rem;
+    }
+    
+    footer h4 {
+        margin-top: 1.5rem;
+    }
+    
+    footer [class^="col-"]:first-child h4 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .prob-bar-label {
+        font-size: 0.8rem;
+    }
+    
+    .prob-bar {
+        font-size: 0.7rem;
+        padding: 0 0.25rem;
+    }
+    
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animations */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+} 
